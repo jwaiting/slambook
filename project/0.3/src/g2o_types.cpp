@@ -1,4 +1,4 @@
-#include "myslam/g2o_types.h"
+#include "g2o_types.h"
 
 namespace myslam
 {

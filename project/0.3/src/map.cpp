@@ -17,7 +17,7 @@
  *
  */
 
-#include "myslam/map.h"
+#include "map.h"
 
 namespace myslam
 {

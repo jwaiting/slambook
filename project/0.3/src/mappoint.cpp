@@ -17,8 +17,8 @@
  *
  */
 
-#include "myslam/common_include.h"
-#include "myslam/mappoint.h"
+#include "common_include.h"
+#include "mappoint.h"
 
 namespace myslam
 {

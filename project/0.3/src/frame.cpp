@@ -17,7 +17,7 @@
  *
  */
 
-#include "myslam/frame.h"
+#include "frame.h"
 
 namespace myslam
 {
@@ -27,7 +27,7 @@ Frame::Frame()
 
 }
 
-Frame::Frame ( long id, double time_stamp, SE3 T_c_w, Camera::Ptr camera, Mat color, Mat depth )
+Frame::Frame ( long id, double time_stamp, SE3<double> T_c_w, Camera::Ptr camera, Mat color, Mat depth )
 : id_(id), time_stamp_(time_stamp), T_c_w_(T_c_w), camera_(camera), color_(color), depth_(depth), is_key_frame_(false)
 {
 
@@ -70,7 +70,7 @@ double Frame::findDepth ( const cv::KeyPoint& kp )
     return -1.0;
 }
 
-void Frame::setPose ( const SE3& T_c_w )
+void Frame::setPose ( const SE3<double>& T_c_w )
 {
     T_c_w_ = T_c_w;
 }

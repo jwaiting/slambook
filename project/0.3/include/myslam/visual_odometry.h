@@ -20,8 +20,8 @@
 #ifndef VISUALODOMETRY_H
 #define VISUALODOMETRY_H
 
-#include "myslam/common_include.h"
-#include "myslam/map.h"
+#include "common_include.h"
+#include "map.h"
 
 #include <opencv2/features2d/features2d.hpp>
 
@@ -51,7 +51,7 @@ public:
     vector<cv::DMatch>      feature_matches_;   // feature matches 
     cv::FlannBasedMatcher   matcher_flann_;     // flann matcher
    
-    SE3 T_c_r_estimated_;    // the estimated pose of current frame 
+    SE3<double> T_c_r_estimated_;    // the estimated pose of current frame 
     int num_inliers_;        // number of inlier features in icp
     int num_lost_;           // number of lost times
     
